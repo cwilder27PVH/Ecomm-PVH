@@ -1,0 +1,39 @@
+[1025/003122.610:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/003123.021:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/004747.540:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/004827.273:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/004915.234:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/005931.074:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010033.603:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010335.255:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010335.533:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010627.316:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010627.316:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010641.544:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010655.065:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010655.487:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010731.039:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010740.456:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010756.508:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010817.631:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/010826.957:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/011019.686:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/011034.151:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/014311.188:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/015036.121:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/015239.194:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1025/020304.919:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1028/221318.796:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[1029/001057.517:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[1218/141257.170:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0116/171008.523:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0129/125436.685:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0611/150529.719:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0613/002130.282:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0617/113325.079:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0703/034234.334:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[0703/041751.554:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0712/014405.222:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0712/014405.412:ERROR:process_info.cc(550)] ReadMemoryInfo failed
+[0712/014405.412:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0712/014405.412:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
