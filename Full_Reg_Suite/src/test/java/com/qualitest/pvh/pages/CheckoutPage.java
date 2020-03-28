@@ -163,7 +163,7 @@ public abstract class CheckoutPage extends BasePage {
 	 * Method to click apply gift card button
 	 */
 	private void applyGiftCard() {
-		LOGGER.info("Clicking gift card apply button");
+		LOGGER.info("Clicking gift card apply button -----");
 		applyGiftCard.click();
 	}
 	

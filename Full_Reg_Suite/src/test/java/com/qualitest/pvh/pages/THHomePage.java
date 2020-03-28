@@ -153,8 +153,8 @@ public class THHomePage extends HomePage {
 	 */
 	@Step
 	public void verifyPageTitle() {
-		assertThat(currentPage.getTitle()).as("Tommy Hilfiger Home Page Title")
-				.isEqualTo("Tommy Hilfiger USA");
+		//assertThat(currentPage.getTitle()).as("Tommy Hilfiger Home Page Title").isEqualTo("Tommy Hilfiger USA");
+		assertThat(currentPage.getTitle()).as("Tommy Hilfiger Home Page Title").isEqualTo("Tommy Hilfiger - Register");
 	}
 	
 	@Step

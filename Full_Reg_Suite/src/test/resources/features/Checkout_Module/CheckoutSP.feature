@@ -189,7 +189,7 @@ Scenario Outline: Verify checkout using American Express card
     | brand  | item    | guestFields                                                                                             | type             | number          | code  | expMonth | expYear |
 	| SPEEDO | 7530477 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | American Express | 378282246310005 | 4561  | 10       | 2020    | 
 
-@id=11 @positive @parallel @checkout_module @desktop @checkOut @brand=SP
+@id=11 @positive @smokeT @parallel @checkout_module @desktop @checkOut @brand=SP
 Scenario Outline: Verify checkout using Paypal
 #	Given User access <brand> website
 #	And User add <item> to cart

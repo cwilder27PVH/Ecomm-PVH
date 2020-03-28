@@ -229,9 +229,10 @@ public abstract class OrderSummaryPage extends BasePage {
 		{
 			clickOffPopUp();
 		}
-		LOGGER.info("Previously saved product information is : " + name + price + cardType);
+		LOGGER.info("Previously saved product information is : " + name + ":" + price + ":" + cardType);
 		LOGGER.info("Name of first product displayed on order summary page is: " + getNameOfProduct(0));
-		SA.assertThat(getNameOfProduct(0)).isEqualTo(name);
+		//SA.assertThat(getNameOfProduct(0)).isEqualTo(name);
+		SA.assertThat(getNameOfProduct(0)).isEqualToIgnoringCase(name);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0, 500)");
 		float i = getOrderTotal();

@@ -257,7 +257,7 @@ Scenario Outline: Verify checkout using American Express card
 #	| brand | item     | Address                                                                                        | name        | number          | code | expMonth | expYear |
 #	| CKCA  | 25016876 | ckSpeedoTH2@yopmail.com;Cindy;Smith;3932 Richmond Road;;Calgary;Alberta; ;T2T 0C6;9085262900 | Cindy Smith | 378282246310005 | 4561 | 10       | 2020    |
 	
-@id=11 @positive @parallel @checkout_module @desktop @checkOut @brand=CK
+@id=11 @positive @smokeT @parallel @checkout_module @desktop @checkOut @brand=CK
 Scenario Outline: Verify checkout using Paypal
 #	Given User access <brand> website
 #	And User add <item> to cart

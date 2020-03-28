@@ -34,9 +34,9 @@ public abstract class HomePage extends BasePage {
 	@FindBy(xpath = "//a[@title='Go to the Sign In page']")
 	private BaseElement signIn;
 
-	//@FindBy(xpath = "//div[@class='searchInputWrapper clearfix']/a")
+	@FindBy(xpath = "//div[@class='searchInputWrapper clearfix']/a")
 	//*[@class='searchButtonWrapper']
-	@FindBy(xpath = "//*[@class='searchButtonWrapper']")
+//	@FindBy(xpath = "//*[@class='searchButtonWrapper']")
 	protected BaseElement searchButton;
 
 	@FindBy(xpath = "//a[@title='Search']/img")

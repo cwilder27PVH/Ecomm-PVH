@@ -26,8 +26,8 @@ Scenario Outline: Complete registration with valid details from SignIn Page
 	Then User should be registered successfully with complete details
 	
 	Examples:
-	| brand  | email                   | password  | firstName | lastName | address            | apartment | city        | country       | state      | zip   | phone      | gender | bMonth  | bDay | prefCountry   | prefState  | prefStore                                                  | communication | type |
-	| TH     | thtest@testmail.com     | abcdef123 | Test PVH  | User     | 1200 US Highway 22 | 1         | Bridgewater | United States | New Jersey | 08807 | 7326368321 | Male   | January | 12   | United States | New Jersey | Garden State Plaza - 1 Garden State Plaza Way, Paramus, NJ | web           | men  |
+	| brand  | email                   | password  | firstName | lastName | address            | apartment | city        | country       | state      | zip   | phone      | gender | bMonth  | bDay | prefCountry   | prefState  | prefStore                                                                 | communication | type |
+	| TH     | thtest@testmail.com     | abcdef123 | Test PVH  | User     | 1200 US Highway 22 | 1         | Bridgewater | United States | New Jersey | 08807 | 7326368321 | Male   | January | 12   | United States | New Jersey | The Outlets at Bergen Town Center - 2701 Bergen Town Center, Paramus, NJ | web           | men  |
 	
 @id=3 @negative @parallel @registration_login_module @brand=TH @desktop  @addressy
 Scenario Outline: Complete registration without providing details from SignIn Page

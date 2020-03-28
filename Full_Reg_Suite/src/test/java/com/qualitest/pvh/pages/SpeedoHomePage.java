@@ -36,6 +36,9 @@ public class SpeedoHomePage extends HomePage {
 	@FindBy(xpath = "//*[@id= 'mini_cart_link']")
 	private BaseElement cart;
 	
+	@FindBy(xpath = "//*[@class='searchButtonWrapper']")
+	protected BaseElement searchButton;
+	
 	@FindBy(xpath = "//*[@id='breadcrumb']/a[2]")
 	private BaseElement deptBreadCrumb;
 	
@@ -57,7 +60,7 @@ public class SpeedoHomePage extends HomePage {
 	@FindBy(xpath = " //*[@id='sale']//*[@class='navItem']/a")
 	private List<WebElement> SaleList;
 	
-	
+	////a[contains(text(), 'Sign up')]
 	
 	@FindBy(xpath = "//*[@class = 'tt-suggestion-text tt-suggestion-text-custom']")
 	private List<WebElement> searchSuggestionList;
@@ -126,6 +129,25 @@ public class SpeedoHomePage extends HomePage {
 	@FindBy(xpath = "//*[@class = 'logo']/a")
 	private BaseElement homePageButton;
 	
+	
+	@FindBy(xpath = "//span[contains(text(), 'Sign In')]")
+	private BaseElement signIn;
+	
+	public boolean isUserSignedIn() {
+		return !signIn.exists();
+	}
+	
+	public void clickSignInRegister() {
+		LOGGER.info("Click SignIn / Register link");
+		try {
+			signIn.click();
+		} catch (Exception e) {
+			LOGGER.info("Sign in button was not visible so refreshing page");
+			pageRefresh();
+			signIn.click();
+		}
+		clickOffPopUp();
+	}	
 	public void verifyAllHeaderLinks()
 	{
 		System.out.println("The list of dept : "+ HeaderDeptList.size());
@@ -159,6 +181,22 @@ public class SpeedoHomePage extends HomePage {
 		enterSearchTerm(item);
 		//searchInput.submit();
 		searchInput.sendKeys(Keys.ENTER);
+	}
+	
+protected void clickSearch() {
+		
+		LOGGER.info("Clicking search button");
+		if(searchButton.isVisible()) {
+			searchButton.click();
+		} else {
+			LOGGER.info("Refreshing page");
+			//pageRefresh();
+			clickOffPopUp();
+			sleep(4000);
+			//searchButton.waitUntilEnabled();
+			searchButton.waitUntilClickable().click();
+			sleep(3000);
+		}
 	}
 	
 

@@ -78,6 +78,8 @@ public class SpeedoCartPage extends CartPage {
 		shopRunner.click();
 	}
 	
+	
+	
 	private void signInWithShopRunner(String email, String password) {
 		LOGGER.info("Entering shoprunner email and password: " + email + "and" + password);
 		shopRunnerEmail.type(email);

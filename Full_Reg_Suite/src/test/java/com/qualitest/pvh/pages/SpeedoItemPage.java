@@ -176,20 +176,28 @@ public class SpeedoItemPage extends ItemPage {
 	 * cretaed a method for style number only for speedo instead of using itemspage
 	 * method ..and added xpath for colorSwatch
 	 */
-	/*
-	 * public String getProductStyleNumber() { String a =
-	 * colorSwatch.getAttribute("data-part-number");
-	 * System.out.println("the number is"+a); return a; }
-	 */
 	
-	public String getProductStyleNumber() {
-		sleep(5000);
-		WebElement csElement= colorSwatch.findElement(By.className("productswatches")).findElement(By.className("active"));
-		String a = csElement.getAttribute("data-part-number");
-		System.out.println("the number is: "+a);
-		return a;
+	
+	  public String getProductStyleNumber() { 
+		  String a =  colorSwatch.getAttribute("data-part-number");
+		  System.out.println("the number is"+a); 
+		  return a; 
 	}
+	  
+	  public void clickAddToBag() {
+			LOGGER.info("Clicking add to bag");
+			sleep(5000);
+		evaluateJavascript("arguments[0].scrollIntoView();", addToBag);
+		addToBag.waitUntilClickable().click();
+	}
+	 
 	
+	/*
+	 * public String getProductStyleNumber() { sleep(5000); WebElement csElement=
+	 * colorSwatch.findElement(By.className("productswatches")).findElement(By.
+	 * className("active")); String a = csElement.getAttribute("data-part-number");
+	 * System.out.println("the number is: "+a); return a; }
+	 */
 	
 	
 	

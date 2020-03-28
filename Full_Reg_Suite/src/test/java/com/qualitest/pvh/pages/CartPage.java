@@ -78,7 +78,8 @@ public abstract class CartPage extends BasePage{
 	@FindBy(xpath = "//*[@class= 'total']")
 	private List<WebElement> prices;
 	
-	@FindBy(xpath = "//span[contains(text(),'PROCEED TO SECURE CHECKOUT')]")
+//	@FindBy(xpath = "//span[contains(text(),'PROCEED TO SECURE CHECKOUT')]")
+	@FindBy(xpath = "//*[@id = 'guestShopperContinueWrapper']")
 	private BaseElement proceedCheckOut;
 	
 	@FindBy(id="OrderItemDetailsf_div_2_1")
@@ -331,7 +332,7 @@ public abstract class CartPage extends BasePage{
 	public void clickProceedCheckOut() {
 		LOGGER.info("Clicking Proceed To Secure Checkout");
 		getDriver().navigate().refresh();
-		proceedCheckOut.click();
+		proceedCheckOut.waitUntilClickable().click();
 	}
 	
 	public void clickPromoCodeApply() {

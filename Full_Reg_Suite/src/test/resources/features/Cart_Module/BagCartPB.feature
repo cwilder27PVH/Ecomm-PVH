@@ -14,7 +14,7 @@ Scenario Outline: Add product to cart from product details page as guest user
 	
 	Examples:
 	| brand	| item     | firstquantity |
-	| VH  	| Van8293  | 1             |
+	| VH  	| 1V921384  | 1             |
 	
 #@id=2 @positive  @cart_module @cart @brand=PB @desktop
 #Scenario Outline: Add product to cart from quick view page as guest user
@@ -38,7 +38,7 @@ Scenario Outline: Verify searching and adding an item to cart from cart page as 
 
 	Examples:
 	| brand | item     | product       |
-	| VH  	| Van8293 |  81902401 |
+	| VH  	| 1V921384 |  81902401 |
 
 	
 @id=4 @positive  @cart_module @cart @brand=PB @desktop
@@ -57,7 +57,7 @@ Scenario Outline: Update quantity of product from cart page as guest user
 
 	Examples:
 	| brand | item       | firstquantity | secondquantity |
-	| VH    | Van8293   | 1             | 3              |
+	| VH    | 1V921384   | 1             | 3              |
 	
 @id=5 @positive  @cart_module @cart @brand=PB @desktop
 Scenario Outline: Removing 1 product as guest user when cart has more than 1 product as guest user
@@ -81,7 +81,7 @@ Scenario Outline: Removing 1 product as guest user when cart has more than 1 pro
 
 	Examples:
 	| brand | item       | product       | firstquantity |
-	| VH  	| Van8293   | 81902401 |       1       |
+	| VH  	| 1V921384   | 81902401 |       1       |
 
 #Edit scenario revisit this test case
 @id=6 @positive  @cart_module @cart @brand=PB @desktop
@@ -102,7 +102,7 @@ Scenario Outline: Add product from wishlist to cart as signed in user
 
 	Examples:
 	| brand	| email                   | password | product  |
-	| VH    | myaccountvh45@gmail.com | Passw0rd | Van8293 |   
+	| VH    | myaccountvh45@gmail.com | Passw0rd | 1V921384 |   
 
 @id=7 @positive  @cart_module @cart @brand=PB @desktop
 Scenario Outline: Add product with size selection as guest user then edit product size in cart as signed in user
@@ -140,7 +140,7 @@ Scenario Outline: Add product with size selection as guest user then edit produc
 	
 #	Examples:
 #	| brand | product      | quantity | to      | from  | message         |
-#	| VH    | Van8293     | 1        | William | Anish | Happy Birthday! |
+#	| VH    | 1V921384     | 1        | William | Anish | Happy Birthday! |
 	
 #@id=9 @positive  @cart_module @cart @brand=PB @desktop
 #Scenario Outline: Remove gift box as guest user
@@ -159,7 +159,7 @@ Scenario Outline: Add product with size selection as guest user then edit produc
 	
 #	Examples:
 #	| brand | item     | quantity | to    | from  | message        |
-#	| VH    | Van8293 | 1        | Anish | Bilal | Happy belated! |
+#	| VH    | 1V921384 | 1        | Anish | Bilal | Happy belated! |
 
 @id=10 @positive  @cart_module @cart @brand=PB @desktop
 Scenario Outline: Add, Edit and Remove gift box as guest user
@@ -180,7 +180,7 @@ Scenario Outline: Add, Edit and Remove gift box as guest user
 
 	Examples:
 	| brand | item     | quantity | to      | from  | message         | newTo   | newFrom | newMessage     | 
-	| VH    | Van8293 | 1        | William | Anish | Happy Birthday! | Anish   | William | Happy day!     |
+	| VH    | 1V921384 | 1        | William | Anish | Happy Birthday! | Anish   | William | Happy day!     |
 
 @id=11 @negative  @cart_module @cart
 Scenario Outline: Apply invalid promo code as guest user
@@ -197,7 +197,7 @@ Scenario Outline: Apply invalid promo code as guest user
 	
 	Examples:
 	| brand | item     | quantity | code    | text                       |
-	| VH    | Van8293 | 1        | ABCDEFG | ABCDEFG is an invalid code |
+	| VH    | 1V921384 | 1        | ABCDEFG | ABCDEFG is an invalid code |
 
 #@id=12 @positive  @cart_module
 #Scenario Outline: Verify applying valid promo code which is applicable to more then 1 item in cart as guest user
@@ -283,7 +283,7 @@ Scenario Outline: Remove all product from cart as guest user and verify empty ca
 	
 	Examples:
 	| brand | item     |
-	| VH    | Van8293 |
+	| VH    | 1V921384 |
 	
 #@id=17 @positive  @cart_module @cart @brand=PB @desktop
 #Scenario Outline: Reduce quantity of product from cart page as guest user
@@ -319,7 +319,7 @@ Scenario Outline: Verify products added as a guest user are prevalent in the car
 	
 	Examples:
 	| brand | item      | email                     | password   | quantity |
-	| VH    | Van8293  | myaccountvh45@gmail.com   | Passw0rd   | 1        |
+	| VH    | 1V921384  | myaccountvh45@gmail.com   | Passw0rd   | 1        |
 		
 	
 @id=19 @positive  @cart_module @cart
@@ -340,7 +340,7 @@ Scenario Outline: Verify sign in users can add products to cart
 		
 	Examples:
 	| brand	| email                   | password | item       | firstquantity | secondquantity |
-	| VH    | myaccountvh45@gmail.com | Passw0rd | Van8293   | 1             | 3              |
+	| VH    | myaccountvh45@gmail.com | Passw0rd | 1V921384   | 1             | 3              |
 	
 #@id=20 @negative  @cart_module @cart
 #Scenario Outline: Add more than 5 quantity of product with less than 5 quantity available on cart page
@@ -378,7 +378,7 @@ Scenario Outline: Verify signed in users can edit quantity of product in pdp and
 	
 	Examples:
 	| brand | item      | email                   | password | firstquantity | secondquantity |
-	| PB    | Van8293  | myaccountvh45@gmail.com | Passw0rd |  1            |         3      |
+	| PB    | 1V921384  | myaccountvh45@gmail.com | Passw0rd |  1            |         3      |
 
 #@id=22 @positive  @cart_module @cart
 #Scenario Outline: Add product with more than 1 quantity as guest user to cart then reduce quantity as signed in user
@@ -430,7 +430,7 @@ Scenario Outline: Add the same item to a cart twice and check cart for quantity
 	
 	Examples:
 	| brand | item       | quantity | 
-	| VH    | Van8293   | 2        | 
+	| VH    | 1V921384   | 2        | 
 
 #@id=25 @negative  @cart_module @cart
 #Scenario Outline: Adding more then 50 items to cart
@@ -505,7 +505,7 @@ Scenario Outline: Verify adding an item to cart as signed in user and apply inva
 	
 	Examples:
 	| brand | email                    | password | item      | code   | text                      |
-	| VH    | myaccountvh45@gmail.com  | Passw0rd | Van8293  | TTTEEE | TTTEEE is an invalid code |
+	| VH    | myaccountvh45@gmail.com  | Passw0rd | 1V921384  | TTTEEE | TTTEEE is an invalid code |
 
 #@id=29 @positive  @cart_module
 #Scenario Outline: Verify adding an item to cart as signed in user and apply valid promo code
@@ -553,7 +553,7 @@ Scenario Outline: Verify adding a item to wishlist that is already present in ca
 	
 	Examples:
 	| brand	| email                   | password | item     |
-	| VH    | myaccountvh45@gmail.com | Passw0rd | Van8293 |
+	| VH    | myaccountvh45@gmail.com | Passw0rd | 1V921384 |
 	
 @id=31 @positive  @cart_module @cart @brand=PB @desktop
 Scenario Outline: Verify clicking edit button from mini cart navigates user to cart page
@@ -565,4 +565,4 @@ Scenario Outline: Verify clicking edit button from mini cart navigates user to c
 	
 	Examples:
 	| brand	| product    |
-	| VH    | Van8293   |
+	| VH    | 1V921384   |

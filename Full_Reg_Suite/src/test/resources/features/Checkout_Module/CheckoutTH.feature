@@ -18,7 +18,7 @@ Scenario Outline: Adding new shipping address during guest checkout
 
 	Examples:
 	| brand | item    | guestFields                                                                                                 | newAddress                                                                              					    |
-	| TH    | aw04548 | chck1speedo@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | chck3+ckus@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey;United States;08807;9082316660 |
+	| TH    | aw08418 | chck1speedo@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | chck3+ckus@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey;United States;08807;9082316660 |
 	
 @id=2 @positive @parallel @checkout_module @desktop @checkOut @addressy
 Scenario Outline: Editing shipping address during checkout with signed in user
@@ -33,7 +33,7 @@ Scenario Outline: Editing shipping address during checkout with signed in user
     
 	Examples:
 	| brand | email                   | password | item    | editAddress                                                                                                    | firstName | lastName | address    | apartment | city        | country       | state      | zip   | phone      | gender | bMonth  | bDay | prefCountry   | prefState  | prefStore                                                  | communication | type |	
-	| TH    | myaccountth44@gmail.com | Passw0rd | aw04548 | ckSpeedoTH2@yopmail.com;Bobby;Smith;1200 US Highway 22; ;Bridgewater;New Jersey;United States;08807;1234567890 | myaccount | th6      | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 7326368321 | Male   | January | 1    | United States | New Jersey | Garden State Plaza - 1 Garden State Plaza Way, Paramus, NJ |  web          | men  |
+	| TH    | myaccountth44@gmail.com | Passw0rd | aw08418 | ckSpeedoTH2@yopmail.com;Bobby;Smith;1200 US Highway 22; ;Bridgewater;New Jersey;United States;08807;1234567890 | myaccount | th6      | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 7326368321 | Male   | January | 1    | United States | New Jersey | Garden State Plaza - 1 Garden State Plaza Way, Paramus, NJ |  web          | men  |
 
 @id=3 @positive @parallel @checkout_module @desktop @checkOut @addressy
 Scenario Outline: Adding new billing address during guest checkout
@@ -47,7 +47,7 @@ Scenario Outline: Adding new billing address during guest checkout
 	
 	Examples:
 	| brand | item    | guestFields                                                                                                 | newBilling                                                                                                      |
-	| TH    | aw04548 | chck1speedo@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | chck3+ckus@testmail.com;Cindy;Smith;1001 Frontier Road;22;Bridgewater;New Jersey;United States;08807;9082316660 |
+	| TH    | aw08418 | chck1speedo@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | chck3+ckus@testmail.com;Cindy;Smith;1001 Frontier Road;22;Bridgewater;New Jersey;United States;08807;9082316660 |
 
 @id=4 @positive @parallel @checkout_module @desktop @checkOut @addressy
 Scenario Outline: Editing billing address during checkout with signed in user
@@ -63,7 +63,7 @@ Scenario Outline: Editing billing address during checkout with signed in user
     
 	Examples:
 	| brand | email                   | password | item    | editAddress                                                                                                      | newBilling                                                                                                     | firstName | lastName | address    | apartment | city        | country       | state      | zip   | phone      | gender | bMonth  | bDay | prefCountry   | prefState  | prefStore                                                  | communication | type |	
-	| TH    | myaccountth44@gmail.com | Passw0rd | aw04548 | ckSpeedoTH2@yopmail.com;Alex;Smith;2222 Quail Ridge Drive; ;Plainsboro;New Jersey;United States;08536;1234567890 | chck3+ckus@testmail.com;Shaun;Smith;1001 Frontier Road; ;Bridgewater;New Jersey;United States;08807;9082316660 | myaccount | th6      | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 7326368321 | Male   | January | 1    | United States | New Jersey | Garden State Plaza - 1 Garden State Plaza Way, Paramus, NJ |  web          | men  |	
+	| TH    | myaccountth44@gmail.com | Passw0rd | aw08418 | ckSpeedoTH2@yopmail.com;Alex;Smith;2222 Quail Ridge Drive; ;Plainsboro;New Jersey;United States;08536;1234567890 | chck3+ckus@testmail.com;Shaun;Smith;1001 Frontier Road; ;Bridgewater;New Jersey;United States;08807;9082316660 | myaccount | th6      | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 7326368321 | Male   | January | 1    | United States | New Jersey | Garden State Plaza - 1 Garden State Plaza Way, Paramus, NJ |  web          | men  |	
 
 	
 @id=5 @positive @parallel @checkout_module @desktop @checkOut @addressy
@@ -84,7 +84,7 @@ Scenario Outline: Selecting existing shipping and existing billing address durin
 
 	Examples:
 	| brand | item    | guestFields                                                                                                 | newAddress                                                                                                      |values                                                                                      | newBilling                                                                                | email                   | password | firstName | lastName | address    | apartment | city        | country       | state      | zip   | phone      | gender | bMonth  | bDay | prefCountry   | prefState  | prefStore                                                  | communication | type |
-	| TH    | aw04548 | chck1speedo@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | chck3+ckus@testmail.com;Cindy;Smith;1001 Frontier Road;22;Bridgewater;New Jersey;United States;08807;9082316660 |myaccount;th3;1001 Frontier Road;15;Bridgewater;United States;New Jersey;08807;7324567890   | myaccount;th3;1001 Frontier Road;15;Bridgewater;United States;New Jersey;08807;7324567890 | myaccountth6@gmail.com  | Passw0rd | myaccount | th6      | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 7326368321 | Male   | January | 1    | United States | New Jersey | Garden State Plaza - 1 Garden State Plaza Way, Paramus, NJ |  web          | men  |
+	| TH    | aw08418 | chck1speedo@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | chck3+ckus@testmail.com;Cindy;Smith;1001 Frontier Road;22;Bridgewater;New Jersey;United States;08807;9082316660 |myaccount;th3;1001 Frontier Road;15;Bridgewater;United States;New Jersey;08807;7324567890   | myaccount;th3;1001 Frontier Road;15;Bridgewater;United States;New Jersey;08807;7324567890 | myaccountth6@gmail.com  | Passw0rd | myaccount | th6      | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 7326368321 | Male   | January | 1    | United States | New Jersey | Garden State Plaza - 1 Garden State Plaza Way, Paramus, NJ |  web          | men  |
 
 #@id=6 @positive @parallel @checkout_module @desktop @checkOut @addressy
 #Scenario Outline: Selecting existing billing address during checkout
@@ -118,7 +118,7 @@ Scenario Outline: Checkout using Visa card
 
 	Examples:
 	| brand | item    | guestFields                                                                                              | type | number           | code | expMonth | expYear |
-	| TH    | aw07297 | testing@gmail.com;Anish;Patel;1200 US Highway 22; ;Bridgewater;New Jersey;United States;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    |
+	| TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22; ;Bridgewater;New Jersey;United States;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    |
     
    
 @id=8 @positive @smokeT @parallel @checkout_module @desktop @checkOut
@@ -140,7 +140,7 @@ Scenario Outline: Checkout using MasterCard
 
 	Examples:
 	| brand | item    | guestFields                                                                                             | type       | number           | code | expMonth | expYear |
-    | TH    | aw07297 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | MasterCard | 5555555555554444 | 456  | 10       | 2020    |
+    | TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | MasterCard | 5555555555554444 | 456  | 10       | 2020    |
 
 
 @id=9 @positive @smokeT @parallel @checkout_module @desktop @checkOut
@@ -162,7 +162,7 @@ Scenario Outline: Checkout using Discover card
 
 	Examples:
 	| brand | item    | guestFields                                                                                             | type     | number           | code | expMonth | expYear |
-    | TH    | aw07297 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | Discover | 6011123412331112 | 456  | 10       | 2020    |
+    | TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | Discover | 6011123412331112 | 456  | 10       | 2020    |
     
 	
 @id=10 @positive @smokeT @parallel @checkout_module @desktop @checkOut @brand=TH
@@ -184,10 +184,10 @@ Scenario Outline: Verify checkout using American Express card
 
 	Examples:
 	| brand | item    | guestFields                                                                                             | type             | number          | code | expMonth | expYear |	
-	| TH    | aw07297 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | American Express | 378282246310005 | 4561 | 10       | 2020    |
+	| TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | American Express | 378282246310005 | 4561 | 10       | 2020    |
 
 	
-@id=11 @positive @parallel @checkout_module @desktop @checkOut
+@id=11 @positive @smokeT @parallel @checkout_module @desktop @checkOut
 Scenario Outline: Verify checkout using Paypal
 #	Given User access <brand> website
 #	And User add <item> to cart
@@ -203,7 +203,7 @@ Scenario Outline: Verify checkout using Paypal
 		
 	Examples:
 	| brand | item     | guestFields                                                                                                | email                | password | shippingMethod |
-	| TH    | aw04548  | Testerpvh1@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | Testerpvh1@gmail.com | passw0rd | standard       |
+	| TH    | aw08418  | Testerpvh1@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | Testerpvh1@gmail.com | passw0rd | standard       |
 	
 	
 @id=12 @positive @parallel @checkout_module @desktop @checkOut
@@ -219,7 +219,7 @@ Scenario Outline: Verify checkout using GiftCard#	Given User access <brand> webs
 
 	Examples:   
 	| brand | item    | guestFields                                                                                             | number              | pin  |   
-	| TH    | aw04548 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | 6006492136503706713 | 1256 |
+	| TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | 6006492136503706713 | 1256 |
 	
 #@id=13 @positive @parallel @checkout_module @desktop
 #Scenario Outline: Verify checkout using Loyalty
@@ -248,7 +248,7 @@ Scenario Outline: Verify checkout using Shoprunner
 	
 	Examples:
 	| brand | item    | email                  | password    |
-	| TH    | aw04548 | testatech123@gmail.com | password123 |
+	| TH    | aw08418 | testatech123@gmail.com | password123 |
 	
 #@id=15 @positive @parallel @checkout_module @desktop @checkOut
 #Scenario Outline: Checkout using CreditCard and GiftCard
@@ -268,10 +268,10 @@ Scenario Outline: Verify checkout using Shoprunner
 		
 #	Examples: Tommy Hilfiger
 #	| brand | item    | guestFields                                                                                             | creditCardType   | creditCardNumber | creditCardCode | creditCardExpMonth | creditCardeExpYear | giftCardNumber     | giftCardPin |
-#	| TH    | aw04548 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | VISA             | 4111111111111111 | 456            | 10                 | 2020               | 6006492136503706713| 1256        |
-#	| TH    | aw04548 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | MasterCard       | 5555555555554444 | 456            | 10                 | 2020               | 6006492136503706713| 1256        |
-#	| TH    | aw04548 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | Discover         | 6011123412331112 | 456            | 10                 | 2020               | 6006492136503706713| 1256        |
-#	| TH    | aw04548 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | American Express | 378282246310005  | 4561           | 10                 | 2020               | 6006492136503706713| 1256        |
+#	| TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | VISA             | 4111111111111111 | 456            | 10                 | 2020               | 6006492136503706713| 1256        |
+#	| TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | MasterCard       | 5555555555554444 | 456            | 10                 | 2020               | 6006492136503706713| 1256        |
+#	| TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | Discover         | 6011123412331112 | 456            | 10                 | 2020               | 6006492136503706713| 1256        |
+#	| TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | American Express | 378282246310005  | 4561           | 10                 | 2020               | 6006492136503706713| 1256        |
 
 #@id=16 @positive @parallel @checkout_module @desktop @checkOut
 #Scenario Outline: Verify checkout using Paypal and GiftCard
@@ -291,7 +291,7 @@ Scenario Outline: Verify checkout using Shoprunner
 	
 #	Examples:
 #	| brand | item     | guestFields                                                                                                | number              | pin  | email                | password |
-#	| TH    | aw04548  | Testerpvh1@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | 6006492136503706713 | 1256 | Testerpvh1@gmail.com | passw0rd |
+#	| TH    | aw08418  | Testerpvh1@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | 6006492136503706713 | 1256 | Testerpvh1@gmail.com | passw0rd |
 		
 #@id=17 @positive @parallel @checkout_module @desktop
 #Scenario Outline: Verify checkout using CreditCard and Loyalty
@@ -352,7 +352,7 @@ Scenario Outline: Verify checkout from minicart
 
 	Examples:
 	| brand | item    |
-	| TH    | aw04548 |
+	| TH    | aw08418 |
 	
 @id=24 @positive @parallel @checkout_module @desktop @checkOut
 Scenario Outline: Verify editing ite quantity and removing an item during checkout
@@ -371,7 +371,7 @@ Scenario Outline: Verify editing ite quantity and removing an item during checko
 
 	Examples:
 	| brand | email                   | password | item    |
-	| TH    | myaccountth44@gmail.com | Passw0rd | aw04548 |
+	| TH    | myaccountth44@gmail.com | Passw0rd | aw08418 |
     
 
 #@id=25 @positive @parallel @checkout_module @desktop @checkOut
@@ -413,7 +413,7 @@ Scenario Outline: Verify editing ite quantity and removing an item during checko
 	
 #	Examples: 
 #	| brand | item    | code      | secondItem |
-#	| TH    | aw04548 | CCP2B61QF | UU00004    |
+#	| TH    | aw08418 | CCP2B61QF | UU00004    |
 
 #@id=28 @positive @parallel @checkout_module @desktop @checkOut
 #Scenario Outline: Verify updating quantity during checkout
@@ -443,7 +443,7 @@ Scenario Outline: Verify adding new shipping address during checkout from review
 
 	Examples:
 	| brand | item    | guestFields                                                                                             | type | number           | code | expMonth | expYear | newAddress                                                                                                      |
-	| TH    | aw04548 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    | chck3+ckus@testmail.com;Cindy;Smith;1001 Frontier Road;22;Bridgewater;New Jersey;United States;08807;9082316660 |
+	| TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    | chck3+ckus@testmail.com;Cindy;Smith;1001 Frontier Road;22;Bridgewater;New Jersey;United States;08807;9082316660 |
     
 @id=30 @positive @parallel @checkout_module @desktop @checkOut
 Scenario Outline: Verify adding new billing address during checkout from review order page
@@ -462,7 +462,7 @@ Scenario Outline: Verify adding new billing address during checkout from review 
 
 	Examples:
 	| brand | item    | guestFields                                                                                             | type | number           | code | expMonth | expYear | newBilling                                                                                                      |
-	| TH    | aw04548 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    | chck3+ckus@testmail.com;Cindy;Smith;1001 Frontier Road;22;Bridgewater;New Jersey;United States;08807;9082316660 |
+	| TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    | chck3+ckus@testmail.com;Cindy;Smith;1001 Frontier Road;22;Bridgewater;New Jersey;United States;08807;9082316660 |
     
 @id=31 @positive @parallel @checkout_module @desktop @checkOut
 Scenario Outline: Verify editing shipping method during checkout from review order page
@@ -485,7 +485,7 @@ Scenario Outline: Verify editing shipping method during checkout from review ord
 		
 	Examples:
 	| brand | item    | guestFields                                                                                             | shippingMethod | type | number           | code | expMonth | expYear | shippingMethod2 |
-	| TH    | aw04548 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | standard       | VISA | 4111111111111111 | 456  | 10       | 2020    | overnight       |
+	| TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | standard       | VISA | 4111111111111111 | 456  | 10       | 2020    | overnight       |
   	
 @id=32 @positive @parallel @checkout_module @desktop @checkOut
 Scenario Outline: Verify editing payment method during checkout from review order page
@@ -508,7 +508,7 @@ Scenario Outline: Verify editing payment method during checkout from review orde
     
 	Examples:
 	| brand | item    | guestFields                                                                                             | type | number           | code | expMonth | expYear | type2      | number2          | code2 | expMonth2 | expYear2 |
-	| TH    | aw04548 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    | MasterCard | 5555555555554444 | 456   | 10        | 2020     |
+	| TH    | aw08418 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    | MasterCard | 5555555555554444 | 456   | 10        | 2020     |
  
 @id=33 @positive @parallel @checkout_module @desktop @checkOut
 Scenario Outline: Verify navigating back from review order page
@@ -527,7 +527,7 @@ Scenario Outline: Verify navigating back from review order page
 	
 	Examples:
 	| brand | email                   | password | item    | type | number           | code | expMonth | expYear | firstName | lastName | address    | apartment | city        | country       | state      | zip   | phone      | gender | bMonth  | bDay | prefCountry   | prefState  | prefStore                                                  | communication | type |             	
-	| TH    | myaccountth44@gmail.com | Passw0rd | aw04548 | VISA | 4111111111111111 | 456  | 10       | 2020    | myaccount | th6      | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 7326368321 | Male   | January | 1    | United States | New Jersey | Garden State Plaza - 1 Garden State Plaza Way, Paramus, NJ |  web          | men  |
+	| TH    | myaccountth44@gmail.com | Passw0rd | aw08418 | VISA | 4111111111111111 | 456  | 10       | 2020    | myaccount | th6      | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 7326368321 | Male   | January | 1    | United States | New Jersey | Garden State Plaza - 1 Garden State Plaza Way, Paramus, NJ |  web          | men  |
 	
 @id=34 @positive @parallel @checkout_module @desktop @checkOut
 Scenario Outline: Verify editing order item from review order page
@@ -548,7 +548,7 @@ Scenario Outline: Verify editing order item from review order page
 	
 	Examples:
 	| brand | email                   | password | item    | type | number           | code | expMonth | expYear | firstName | lastName | address    | apartment | city        | country       | state      | zip   | phone      | gender | bMonth  | bDay | prefCountry   | prefState  | prefStore                                                  | communication | type |             	
-	| TH    | myaccountth44@gmail.com | Passw0rd | aw04548 | VISA | 4111111111111111 | 456  | 10       | 2020    | myaccount | th6      | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 7326368321 | Male   | January | 1    | United States | New Jersey | Garden State Plaza - 1 Garden State Plaza Way, Paramus, NJ |  web          | men  |
+	| TH    | myaccountth44@gmail.com | Passw0rd | aw08418 | VISA | 4111111111111111 | 456  | 10       | 2020    | myaccount | th6      | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 7326368321 | Male   | January | 1    | United States | New Jersey | Garden State Plaza - 1 Garden State Plaza Way, Paramus, NJ |  web          | men  |
 	
 @id=35 @positive @parallel @cart_module @cart @brand=TH @desktop
 Scenario Outline: Verify hazmat message is displaying on the shopping bag page.
