@@ -17,7 +17,10 @@ public class THCheckoutPage extends CheckoutPage{
 	@FindBy(xpath = "//*[@id=\"contentWrapper\"]/h1")
 	private BaseElement titleOfCheckOutPage;
 
-	@FindBy(id="payWithPayPal")
+	//@FindBy(id="payWithPayPal")
+	//@FindBy(xpath = "//*[@id='payWithPayPal']")
+	//*[@id='payWithPayPal']
+	@FindBy(xpath = "//*[@id='payWithPayPal']")
 	private BaseElement payWithPayPal; 
 	
 	@FindBy(xpath = "//*[@id='shippingBillingPageNext']")
@@ -40,9 +43,9 @@ public class THCheckoutPage extends CheckoutPage{
 		sleep(sleeptimeout);
 		//JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		//js.executeScript("window.scrollBy(0,-1000)");
-		evaluateJavascript("arguments[0].scrollIntoView(true);", payWithPayPal);
+	//	evaluateJavascript("arguments[0].scrollIntoView(true);", payWithPayPal);
 		sleep(200);
-		payWithPayPal.click();
+		payWithPayPal.waitUntilClickable().click();
 		sleep(1000);
 		reviewOrder.waitUntilClickable().click();
 		sleep(1000);

@@ -12,7 +12,7 @@ Scenario Outline: Adding new shipping address during guest checkout
 #    And User add <item> to cart
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+#   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User adds new address <newAddress> into fields
     Then User verifies that new address has been selected <newAddress>
@@ -128,7 +128,7 @@ Scenario Outline: Checkout using Visa card
 #    When User provides <addressFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
     And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>
@@ -162,7 +162,7 @@ Scenario Outline: Checkout using MasterCard
 #    When User provides <addressFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
     And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>
@@ -196,7 +196,7 @@ Scenario Outline: Checkout using Discover card
 #    When User provides <addressFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
     And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>
@@ -230,7 +230,7 @@ Scenario Outline: Verify checkout using American Express card
 #    When User provides <addressFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
     And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>
@@ -264,7 +264,7 @@ Scenario Outline: Verify checkout using Paypal
 #	When User provides <guestFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
 #	And User select shipping method <shippingMethod>
 	And User submit order using paypal account <email> and <password>
@@ -296,7 +296,7 @@ Scenario Outline: Verify checkout using GiftCard
 #    When User provides <guestFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
 	And User provides GiftCard information <number> and <pin>
 	Then User verifies GiftCard was applied
@@ -509,7 +509,7 @@ Scenario Outline: Verify adding new shipping address during checkout from review
 #	And User add <product> to cart
 	And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
 #    When User provides <addressFields> into address fields
 	And User clicks next
@@ -529,7 +529,7 @@ Scenario Outline: Verify adding new billing address during checkout from review 
 #    When User provides <addressFields> into address fields
 	And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
 	And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>
@@ -548,7 +548,7 @@ Scenario Outline: Verify editing shipping method during checkout from review ord
 #	When User provides <addressFields> into address fields
 	And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
 #	And User select shipping method <shippingMethod>
     And User clicks next
@@ -571,7 +571,7 @@ Scenario Outline: Verify editing payment method during checkout from review orde
 #    When User provides <addressFields> into address fields
 	And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
     And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>

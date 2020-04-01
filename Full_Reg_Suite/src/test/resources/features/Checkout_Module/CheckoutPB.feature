@@ -11,14 +11,14 @@ Scenario Outline: Adding new shipping address during guest checkout
 #    Given User access <brand> website
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User adds new address <newAddress> into fields
     Then User verifies that new address has been selected <newAddress>
 	
 	Examples:
 	| brand | item    | guestFields                                                                                | newAddress                                                                                      |
-	| VH    | Van8293 | testpb@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | test3+pb@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 |
+	| VH    |  A7982491 | testpb@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | test3+pb@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 |
 	
 @id=2 @positive @parallel @checkout_module @desktop @checkOut @brand=PB @addressy
 Scenario Outline: Editing shipping address during checkout with signed in user
@@ -33,21 +33,21 @@ Scenario Outline: Editing shipping address during checkout with signed in user
     
     Examples:
 	| brand | email                    | password | item      | editAddress                                                                                       | firstName | lastName | address    | apartment | city        | country       | state      | zip   | phone      | gender | bMonth  | bDay |
-	| VH    | myaccountvh4@gmail.com   | Passw0rd | Van8293   | myaccountvh4@gmail.com;Bobby;Smith;1200 US Highway 22; ;Bridgewater;New Jersey; ;08807;1234567890 | Test PVH  | User     | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 1234567890 | Male   | 1       | 1    |
+	| VH    | myaccountvh4@gmail.com   | Passw0rd |  A7982491   | myaccountvh4@gmail.com;Bobby;Smith;1200 US Highway 22; ;Bridgewater;New Jersey; ;08807;1234567890 | Test PVH  | User     | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 1234567890 | Male   | 1       | 1    |
 
 @id=3 @positive @parallel @checkout_module @desktop @checkOut @brand=PB @addressy
 Scenario Outline: Adding new billing address during guest checkout
 #	Given User access <brand> website
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
 	And User adds new address <newBilling> into billing fields
 	Then User verifies that new billing address is selected <newBilling>
 	
 	Examples:
 	| brand | item    | guestFields                                                                                     | newBilling                                                                                      |
-	| VH    | Van8293 | chck1speedo@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | chck3+VH@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 |
+	| VH    |  A7982491 | chck1speedo@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | chck3+VH@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 |
 	
 @id=4 @positive @parallel @checkout_module @desktop @checkOut @brand=PB @addressy
 Scenario Outline: Editing billing address during checkout with signed in user
@@ -63,7 +63,7 @@ Scenario Outline: Editing billing address during checkout with signed in user
     
     Examples:
     | brand | email                  | password | item    | newBilling                                                                                          | editAddress                                                                                       | firstName | lastName | address    | apartment | city        | country       | state      | zip   | phone      | gender | bMonth  | bDay |
-	| VH    | myaccountvh4@gmail.com | Passw0rd | Van8293 | myaccountvh4@gmail.com;Alex;Smith;2222 Quail Ridge Drive; ;Plainsboro;New Jersey; ;08536;1234567890 | myaccountvh4@gmail.com;Shaun;Smith;1001 Frontier Road; ;Bridgewater;New Jersey; ;08807;9082316660 | Test PVH  | User     | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 1234567890 | Male   | 1       | 1    |	
+	| VH    | myaccountvh4@gmail.com | Passw0rd |  A7982491 | myaccountvh4@gmail.com;Alex;Smith;2222 Quail Ridge Drive; ;Plainsboro;New Jersey; ;08536;1234567890 | myaccountvh4@gmail.com;Shaun;Smith;1001 Frontier Road; ;Bridgewater;New Jersey; ;08807;9082316660 | Test PVH  | User     | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 1234567890 | Male   | 1       | 1    |	
 
 @id=5 @positive @parallel @checkout_module @desktop @checkOut @brand=PB @addressy
 Scenario Outline: Selecting existing shipping and existing billing address during checkout for registered user
@@ -83,7 +83,7 @@ Scenario Outline: Selecting existing shipping and existing billing address durin
 
 	Examples:
 	| brand | item    | guestFields                                                                                 | newAddress                                                                                  | values   				  					   	    			                 | newBilling   				  					   							                 | email                   | password  | firstName | lastName | address    | apartment | city        | country       | state      | zip   | phone      | gender | bMonth  | bDay |
-	| VH    | Van8293 | testpb1@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | vh01@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 | myaccount;pb3;1130 US Highway 22;BOX 15;Bridgewater;New Jersey;08807;6094065555 | myaccount;pb3;1200 US Highway 22;BOX 15;Bridgewater;United States;New Jersey;08807;6094065555 | vhtest@testmail.com     | abcdef123 | Test PVH  | User     | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 1234567890 | Male   | 1       | 1    |
+	| VH    |  A7982491 | testpb1@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | vh01@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 | myaccount;pb3;1130 US Highway 22;BOX 15;Bridgewater;New Jersey;08807;6094065555 | myaccount;pb3;1200 US Highway 22;BOX 15;Bridgewater;United States;New Jersey;08807;6094065555 | vhtest@testmail.com     | abcdef123 | Test PVH  | User     | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 1234567890 | Male   | 1       | 1    |
 	
 #@id=6 @positive @parallel @checkout_module @desktop @checkOut @brand=PB @addressy
 #Scenario Outline: Selecting existing billing address during guest user checkout
@@ -96,7 +96,7 @@ Scenario Outline: Selecting existing shipping and existing billing address durin
 
 #	Examples:
 #	| brand | item     | guestFields                                                                                | newBilling                                                                                   | secondNewBilling                                                                             |
-#	| VH    | Van8293  | testvh@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | test1@testmail.com;Shaun;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 | test2@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 |
+#	| VH    |  A7982491  | testvh@gmail.com;Bobby;Smith;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | test1@testmail.com;Shaun;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 | test2@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 |
 	
 @id=7 @positive @smokeT @parallel @checkout_module @desktop @checkOut @brand=PB @addressy
 Scenario Outline: Checkout using Visa card for guest user
@@ -105,7 +105,7 @@ Scenario Outline: Checkout using Visa card for guest user
 #    When User provides <addressFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+#    And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
     And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>
@@ -117,7 +117,7 @@ Scenario Outline: Checkout using Visa card for guest user
 
 	Examples:
 	| brand | item      | guestFields                                                                          		   | type | number           | code | expMonth | expYear |
-	| VH    | Van8293 	| testing@gmail.com;Anish;Patel;1200 US Highway 22; ;Bridgewater;New Jersey; ;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    |
+	| VH    |  A7982491 	| testing@gmail.com;Anish;Patel;1200 US Highway 22; ;Bridgewater;New Jersey; ;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    |
 
  
 @id=8 @positive @smokeT @parallel @checkout_module @desktop @checkOut @brand=PB
@@ -127,7 +127,7 @@ Scenario Outline: Checkout using MasterCard for guest user
 #    When User provides <addressFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
     And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>
@@ -139,7 +139,7 @@ Scenario Outline: Checkout using MasterCard for guest user
 
 	Examples:
 	| brand | item    | guestFields                                                                                 | type       | number           | code | expMonth | expYear |
-	| VH    | Van8293 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | MasterCard | 5555555555554444 | 456  | 10       | 2020    |
+	| VH    |  A7982491 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | MasterCard | 5555555555554444 | 456  | 10       | 2020    |
     
 
 @id=9 @positive @smokeT @parallel @checkout_module @desktop @checkOut @brand=PB
@@ -149,7 +149,7 @@ Scenario Outline: Checkout using Discover card for guest user
 #    When User provides <addressFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
     And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>
@@ -161,7 +161,7 @@ Scenario Outline: Checkout using Discover card for guest user
 
 	Examples:
 	| brand | item    | guestFields                                                                                 | type     | number           | code | expMonth | expYear |
-    | VH    | Van8293 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | Discover | 6011123412331112 | 456  | 10       | 2020    |
+    | VH    |  A7982491 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | Discover | 6011123412331112 | 456  | 10       | 2020    |
  
 
 @id=10 @positive @smokeT @parallel @checkout_module @desktop @checkOut @brand=PB
@@ -171,7 +171,7 @@ Scenario Outline: Verify checkout using American Express card for guest user
 #    When User provides <addressFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+#    And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
     And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>
@@ -183,7 +183,7 @@ Scenario Outline: Verify checkout using American Express card for guest user
 
 	Examples:
 	| brand | item    | guestFields                                                                                 | type             | number          | code | expMonth | expYear |
-	| VH    | Van8293 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | American Express | 378282246310005 | 4561 | 10       | 2020    | 
+	| VH    |  A7982491 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | American Express | 378282246310005 | 4561 | 10       | 2020    | 
 
 @id=11 @positive @smokeT @parallel @checkout_module @desktop @checkOut @brand=PB
 Scenario Outline: Verify checkout using Paypal
@@ -192,7 +192,7 @@ Scenario Outline: Verify checkout using Paypal
 #	When User provides <guestFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
 	And User select shipping method <shippingMethod>
 	And User submit order using paypal account <email> and <password>
@@ -201,7 +201,7 @@ Scenario Outline: Verify checkout using Paypal
 		
 	Examples:
 	| brand | item    | guestFields                                                                                                  | email                | password | shippingMethod |
-	| VH    | Van8293 | Testerpvh1@gmail.com;Anish;Patel;2284 Polk Avenue;;North Brunswick;New Jersey;United States;08902;7323257940 | Testerpvh1@gmail.com | passw0rd | standard       |
+	| VH    |  A7982491 | Testerpvh1@gmail.com;Anish;Patel;2284 Polk Avenue;;North Brunswick;New Jersey;United States;08902;7323257940 | Testerpvh1@gmail.com | passw0rd | standard       |
 	
 	
 @id=12 @positive @parallel @checkout_module @desktop @checkOut @brand=PB
@@ -211,14 +211,14 @@ Scenario Outline: Verify checkout using GiftCard for guest user
 #    When User provides <guestFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
 	And User provides GiftCard information <number> and <pin>
 	Then User verifies GiftCard was applied
 
 	Examples:
 	| brand | item    | guestFields                                                                                             | number           | pin      |
-	| VH    | Van8293 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | 7777127677516507 | 68726267 |
+	| VH    |  A7982491 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | 7777127677516507 | 68726267 |
 
 
 #@id=14 @parallel @positive @checkout_module @desktop @checkOut @brand=PB
@@ -232,7 +232,7 @@ Scenario Outline: Verify checkout using GiftCard for guest user
 	
 #	Examples:
 #	| brand | item   | email                  | password    |
-#	| VH    | Van8293    | testatech123@gmail.com | password123 |
+#	| VH    |  A7982491    | testatech123@gmail.com | password123 |
 
 #@id=15 @positive @parallel @checkout_module @desktop @checkOut @brand=PB
 #Scenario Outline: Checkout using CreditCard and GiftCard for guest user
@@ -256,7 +256,7 @@ Scenario Outline: Verify checkout using GiftCard for guest user
 		
 #	Examples:
 #	| brand | item     | guestFields                                                                                             | creditCardType   | creditCardNumber | creditCardCode | creditCardExpMonth | creditCardeExpYear | giftCardNumber   | giftCardPin | secondquantity |
-#	| VH    | Van8293 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | VISA             | 4111111111111111 | 456            | 10                 | 2020               | 7777127677505212 | 68856122    | 5				|
+#	| VH    |  A7982491 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | VISA             | 4111111111111111 | 456            | 10                 | 2020               | 7777127677505212 | 68856122    | 5				|
 #	| VH    | 81351200 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | MasterCard       | 5555555555554444 | 456            | 10                 | 2020               | 7777127677516507 | 68726267    | 4				|
 #	| VH    | 81351200 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | Discover         | 6011123412331112 | 456            | 10                 | 2020               | 7777127677516507 | 68726267    | 4				|
 #	| VH    | 81351200 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey;United States;08807;1234567890 | American Express | 378282246310005  | 4561           | 10                 | 2020               | 7777127677516507 | 68726267    | 4				|
@@ -348,7 +348,7 @@ Scenario Outline: Verify editing item quantity and removing an item during check
     
 	Examples:
 	| brand | email                   | password | item     |         
-	| VH    | myaccountVH44@gmail.com | Passw0rd | Van8293  | 
+	| VH    | myaccountVH44@gmail.com | Passw0rd |  A7982491  | 
 		
 #@id=25 @positive @parallel @checkout_module @desktop @checkOut @brand=PB
 #Scenario Outline: Verify removing an item during checkout
@@ -361,7 +361,7 @@ Scenario Outline: Verify editing item quantity and removing an item during check
     
 #	Examples:
 #	| brand | email                    | password | item |        
-#	| VH    | myaccountVH4@gmail.com   | Passw0rd | Van8293  | 	
+#	| VH    | myaccountVH4@gmail.com   | Passw0rd |  A7982491  | 	
 
 #@id=26 @positive @parallel @checkout_module @desktop @checkOut @brand=PB
 #Scenario Outline: Verify applying a promo code during checkout
@@ -372,7 +372,7 @@ Scenario Outline: Verify editing item quantity and removing an item during check
 	
 #	Examples: 
 #	| brand | item | code   | secondItem |
-#	| VH    | Van8293  | FALL20 | 72253719   |
+#	| VH    |  A7982491  | FALL20 | 72253719   |
 
 #@id=27 @positive @parallel @checkout_module @desktop @checkOut @brand=PB
 #Scenario Outline: Verify removing a promo code during checkout
@@ -385,7 +385,7 @@ Scenario Outline: Verify editing item quantity and removing an item during check
 	
 #	Examples: 
 #	| brand | item      | code   |
-#	| VH    | Van8293   | FALL20 |
+#	| VH    |  A7982491   | FALL20 |
 
 #@id=28 @positive @parallel @checkout_module @desktop @checkOut @brand=PB
 #Scenario Outline: Verify updating quantity during checkout
@@ -405,7 +405,7 @@ Scenario Outline: Verify adding new shipping address during checkout from review
 #    When User provides <addressFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
 	And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>
@@ -415,7 +415,7 @@ Scenario Outline: Verify adding new shipping address during checkout from review
 
 	Examples:
 	| brand | item    | guestFields                                                                                 | type | number           | code | expMonth | expYear | newAddress                                                                                      |
-	| VH    | Van8293 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    | chck3+VH@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 |
+	| VH    |  A7982491 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    | chck3+VH@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 |
 	
 @id=30 @positive @parallel @checkout_module @desktop @checkOut @brand=PB
 Scenario Outline: Verify adding new billing address during checkout from review order page
@@ -424,7 +424,7 @@ Scenario Outline: Verify adding new billing address during checkout from review 
 #    When User provides <addressFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+ #   And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
 	And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>
@@ -434,7 +434,7 @@ Scenario Outline: Verify adding new billing address during checkout from review 
 
 	Examples:
 	| brand | item    | guestFields                                                                               | type | number           | code | expMonth | expYear | newBilling                                                                                      |
-	| VH    | Van8293 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    | chck3+VH@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 |
+	| VH    |  A7982491 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    | chck3+VH@testmail.com;Cindy;Smith;1001 Frontier Road;;Bridgewater;New Jersey; ;08807;9082316660 |
 	
 @id=31 @positive @parallel @checkout_module @desktop @checkOut @brand=PB
 Scenario Outline: Verify editing shipping method during checkout from review order page
@@ -457,7 +457,7 @@ Scenario Outline: Verify editing shipping method during checkout from review ord
 		
 	Examples:
 	| brand | item    | guestFields                                                                                 | shippingMethod | type | number           | code | expMonth | expYear | shippingMethod2 |
-	| VH    | Van8293 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;7323257940 | standard       | VISA | 4111111111111111 | 456  | 10       | 2020    | overnight       |
+	| VH    |  A7982491 | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;7323257940 | standard       | VISA | 4111111111111111 | 456  | 10       | 2020    | overnight       |
 	
 @id=32 @positive @parallel @checkout_module @desktop @checkOut @brand=PB
 Scenario Outline: Verify editing payment method during checkout from review order page
@@ -466,7 +466,7 @@ Scenario Outline: Verify editing payment method during checkout from review orde
 #    When User provides <addressFields> into address fields
     And User searches an <item> with style number and adds it to cart
     When User proceeds to secure checkout
-    And User proceeds to guest checkout
+#    And User proceeds to guest checkout
     And User provides <guestFields> into address fields
     And User clicks next
     And User enters payment information using credit card <type>, <number>, <code>, <expMonth>, <expYear>
@@ -479,7 +479,7 @@ Scenario Outline: Verify editing payment method during checkout from review orde
     
 	Examples:
 	| brand | item     | guestFields                                                                                 | type | number           | code | expMonth | expYear | type2       | number2          | code2 | expMonth2 | expYear2 |
-	| VH    | Van8293  | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    | MasterCard  | 5555555555554444 | 456   | 10        | 2020     |
+	| VH    |  A7982491  | testing@gmail.com;Anish;Patel;1200 US Highway 22;;Bridgewater;New Jersey; ;08807;1234567890 | VISA | 4111111111111111 | 456  | 10       | 2020    | MasterCard  | 5555555555554444 | 456   | 10        | 2020     |
 	
 @id=33 @positive @parallel @checkout_module @desktop @checkOut @brand=PB
 Scenario Outline: Verify navigating back from review order page
@@ -498,7 +498,7 @@ Scenario Outline: Verify navigating back from review order page
 	
 	Examples:
 	| brand | email                   |  password | item    | type | number           | code | expMonth | expYear | firstName | lastName | address    | apartment | city        | country       | state      | zip   | phone      | gender | bMonth  | bDay |     	
-	| VH    | myaccountVH44@gmail.com |  Passw0rd | Van8293 | VISA | 4111111111111111 | 456  | 10       | 2020    | Test PVH  | User     | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 1234567890 | Male   | 1       | 1    | 	
+	| VH    | myaccountVH44@gmail.com |  Passw0rd |  A7982491 | VISA | 4111111111111111 | 456  | 10       | 2020    | Test PVH  | User     | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 1234567890 | Male   | 1       | 1    | 	
 
 @id=34 @positive @parallel @checkout_module @desktop @checkOut @brand=PB
 Scenario Outline: Verify editing order item from review order page
@@ -521,4 +521,4 @@ Scenario Outline: Verify editing order item from review order page
 	
 	Examples:
 	| brand | email                   | password | item     | type | number           | code | expMonth | expYear | firstName | lastName | address    | apartment | city        | country       | state      | zip   | phone      | gender | bMonth  | bDay |       	
-	| VH    | myaccountvh43@gmail.com | Passw0rd | Van8293  | VISA | 4111111111111111 | 456  | 10       | 2020    | Test PVH  | User     | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 1234567890 | Male   | 1       | 1    |  
+	| VH    | myaccountvh43@gmail.com | Passw0rd |  A7982491  | VISA | 4111111111111111 | 456  | 10       | 2020    | Test PVH  | User     | 1200 US Highway 22 | 1 | Bridgewater | United States | New Jersey | 08807 | 1234567890 | Male   | 1       | 1    |  

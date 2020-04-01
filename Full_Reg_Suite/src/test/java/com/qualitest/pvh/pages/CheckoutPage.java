@@ -283,7 +283,8 @@ public abstract class CheckoutPage extends BasePage {
 		LOGGER.info("Entering Credit Card Number: " + number);
 		for (int i = 0; i <= 2; i++) {
 			try {
-				WebElementFacade cardNumber = find(By.xpath("//input[@name='account1']"));
+				//WebElementFacade cardNumber = find(By.xpath("//input[@name='account1']"));
+				WebElementFacade cardNumber = find(By.xpath("//input[@name='cardNumber']"));
 				cardNumber.clear();
 				cardNumber.type(number);
 				break;
@@ -369,12 +370,13 @@ public abstract class CheckoutPage extends BasePage {
 			
 		} 
 		
-		selectCardType(type);
+		//selectCardType(type);
 		sleep(3000);
 		enterCardNumber(number);
 		enterSecurityCode(code);
-		selectExpMonth(expMonth);
-		selectExpYear(expYear);
+		selectExpDate(expMonth, expYear);
+		//selectExpMonth(expMonth);
+		//selectExpYear(expYear);
 	}
 
 	
@@ -579,7 +581,17 @@ public abstract class CheckoutPage extends BasePage {
      * 
      * @param month - Expiry Month
      */
-    private void selectExpMonth(String month) {
+	
+	private void selectExpDate(String month, String year) {
+		LOGGER.info("Selceting credit card expiry date: " + month + " : " + year);
+		
+		WebElementFacade expiryDate = find(By.xpath("//input[@name='expiry']"));
+		expiryDate.clear();
+		expiryDate.type(month+year);
+		
+	}
+	
+	private void selectExpMonth(String month) {
         LOGGER.info("Selecting credit card expiry month: " + month);
         Select roledropdown = new Select(expMonth);
         roledropdown.selectByVisibleText(month);

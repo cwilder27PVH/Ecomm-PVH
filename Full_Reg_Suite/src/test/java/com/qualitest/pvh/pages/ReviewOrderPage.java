@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.qualitest.core.element.BaseElement;
 import com.qualitest.core.page.BasePage;
+
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.annotations.findby.FindBy;
 
 public abstract class ReviewOrderPage extends BasePage {
@@ -24,8 +26,13 @@ public abstract class ReviewOrderPage extends BasePage {
 	@FindBy(xpath="//div[@id='WC_SingleShipmentSummary_div_31']")
 	public BaseElement backButton;
 	
-	@FindBy(xpath="//*[@id='submitButtonWrapper']/a")
+	//@FindBy(xpath="//*[@id='submitButtonWrapper']/a")
+	@FindBy(xpath="//*[@class='paypal-button-label-container']")
 	private BaseElement proceedToPaypal;
+	
+	//@FindBy(xpath="//*[@class='paypal-button-label-container']")
+	//private List<BaseElement> proceedToPaypalList;
+	
 	
 	@FindBy(xpath="//*[@class='right editOrder link']")
 	private BaseElement editOrderLink;
@@ -102,7 +109,7 @@ public abstract class ReviewOrderPage extends BasePage {
 	 */
 	public void clickProceedToPaypal() {
 		LOGGER.info("Clicking Proceed to paypal button");
-		//proceedToPaypal.click();
+		sleep(10000);
 		proceedToPaypal.waitUntilClickable().click();
 	}
 	

@@ -21,7 +21,7 @@ Scenario Outline: Add product to cart from product details page as guest user
 	
 	Examples:
 	| brand	| item     |
-	| CKUS  | 36096241 |
+	| CKUS  | 36207211-871 |
 #	| CKCA  | 45003293 |
 	
 @id=3 @positive @parallel @cart_module @cart @brand=CK @desktop
@@ -46,8 +46,8 @@ Scenario Outline: Verify cart page is updated when adding mulitple items to cart
 
 	Examples:
 	| brand | item     | product       | 
-	| CKUS  | 36096241 |  37403933-618 |
-#	| CKCA  | 45003293 |  36096241     |
+	| CKUS  | 36207211-871 |  37403933-618 |
+#	| CKCA  | 45003293 |  36207211-871     |
 	
 @id=4 @positive @parallel @cart_module @cart @brand=CK @desktop
 Scenario Outline: Update quantity of product from cart page as guest user
@@ -65,7 +65,7 @@ Scenario Outline: Update quantity of product from cart page as guest user
 
 	Examples:
 	| brand | item         | firstquantity | secondquantity |
-	| CKUS  | 36096241     | 2             | 3              |
+	| CKUS  | 36207211-871     | 2             | 3              |
 #	| CKCA  | 45003293     | 2             | 3              |
 	
 @id=5 @positive @parallel @cart_module @cart @brand=CK @desktop
@@ -90,8 +90,8 @@ Scenario Outline: Removing 1 product as guest user when cart has more than 1 pro
 
 	Examples:
 	| brand | item       | product   |
-	| CKUS  | 36096241   |  33014357 |
-#	| CKCA  | 45003293   |  36096241 |
+	| CKUS  | 36207211-871   |  33014357 |
+#	| CKCA  | 45003293   |  36207211-871 |
 	
 @id=6 @positive @parallel @cart_module @cart @brand=CK @desktop
 Scenario Outline: Add product from wishlist to cart as signed in user
@@ -113,7 +113,7 @@ Scenario Outline: Add product from wishlist to cart as signed in user
 
 	Examples:
 	| brand	| email                      | password | product   |
-	| CKUS  | myaccountckus45@gmail.com  | Passw0rd | 36096241  |
+	| CKUS  | myaccountckus45@gmail.com  | Passw0rd | 36207211-871  |
 #	| CKCA  | myaccountckca45@gmail.com  | Passw0rd | 45003293  |
 	
 @id=7 @positive @parallel @cart_module @cart @brand=CK @desktop
@@ -152,7 +152,7 @@ Scenario Outline: Add product with size selection as guest user then edit produc
 	
 #	Examples:
 #	| brand | product   | quantity | to      | from  | message         |
-#	| CKUS  | 36096241  | 1        | William | Anish | Happy Birthday! |
+#	| CKUS  | 36207211-871  | 1        | William | Anish | Happy Birthday! |
 	
 #@id=9 @positive @parallel @cart_module @brand=CK @desktop
 #Scenario Outline: Remove gift box as guest user
@@ -171,7 +171,7 @@ Scenario Outline: Add product with size selection as guest user then edit produc
 
 #	Examples:
 #	| brand | item      | quantity | to    | from  | message        |
-#	| CKUS  | 36096241  | 1        | Anish | Bilal | Happy belated! |
+#	| CKUS  | 36207211-871  | 1        | Anish | Bilal | Happy belated! |
 	
 @id=10 @positive @parallel @cart_module @cart @brand=CK @desktop
 Scenario Outline: Add, Edit and Remove gift box as guest user
@@ -192,7 +192,7 @@ Scenario Outline: Add, Edit and Remove gift box as guest user
 
 	Examples:
 	| brand | item     | quantity | to      | from  | message         | newTo   | newFrom | newMessage     | 
-	| CKUS  | 36096241 | 1        | William | Anish | Happy Birthday! | Anish   | William | Happy day!     |
+	| CKUS  | 36207211-871 | 1        | William | Anish | Happy Birthday! | Anish   | William | Happy day!     |
 	
 @id=11 @negative @parallel @cart_module @cart @brand=CK @desktop
 Scenario Outline: Apply invalid promo code as guest user
@@ -209,7 +209,7 @@ Scenario Outline: Apply invalid promo code as guest user
 	
 	Examples:
 	| brand | item      | code    | text                       |
-	| CKUS  | 36096241  | ABCDEFG | ABCDEFG is an invalid code |
+	| CKUS  | 36207211-871  | ABCDEFG | ABCDEFG is an invalid code |
 #	| CKCA  | 45003293  | ABCDEFG | ABCDEFG is an invalid code |
 	
 #@id=14 @positive @parallel @cart_module @cart 
@@ -251,7 +251,7 @@ Scenario Outline: Remove 1 product from cart as guest user when cart has only 1 
 	
 	Examples:
 	| brand | item       |
-	| CKUS  | 36096241   |
+	| CKUS  | 36207211-871   |
 #	| CKCA  | 45003293   |
 	
 #@id=17 @positive @parallel @cart_module @cart @brand=CK @desktop
@@ -269,8 +269,8 @@ Scenario Outline: Remove 1 product from cart as guest user when cart has only 1 
 	
 #	Examples:
 #	| brand | product     | firstquantity | secondquantity |
-#	| CKUS  | 36096241    | 3             | 1              |
-#	| CKCA  | 36096241    | 3             | 1              |
+#	| CKUS  | 36207211-871    | 3             | 1              |
+#	| CKCA  | 36207211-871    | 3             | 1              |
 	
 @id=18 @positive @parallel @cart_module @cart @brand=CK @desktop
 Scenario Outline: Verify products added as a guest user are prevalent in the cart upon signing in
@@ -289,8 +289,8 @@ Scenario Outline: Verify products added as a guest user are prevalent in the car
 	And User removes all items in cart
 	
 	Examples:
-	| brand | item       | email                     | password | quantity |
-	| CKUS  | 36096241   | myaccountckus45@gmail.com | Passw0rd | 1        |
+	| brand | item           | email                     | password | quantity |
+	| CKUS  | 36207211-871   | myaccountckus45@gmail.com | Passw0rd | 1        |
 #	| CKCA  | 45003293   | myaccountckca45@gmail.com | Passw0rd | 1        |
 	
 @id=19 @positive @parallel @cart_module @cart 
@@ -310,7 +310,7 @@ Scenario Outline: Verify sign in users can add products to cart
 		
 	Examples:
 	| brand	| email                     | password | item     |
-	| CKUS  | myaccountckus45@gmail.com | Passw0rd | 36096241 |
+	| CKUS  | myaccountckus45@gmail.com | Passw0rd | 36207211-871 |
 #	| CKCA  | myaccountckca45@gmail.com | Passw0rd | 45003293 |
 	
 #@id=20 @negative @parallel @cart_module @cart  
@@ -349,7 +349,7 @@ Scenario Outline: Verify signed in users can edit quantity of product in pdp and
 
 	Examples:
 	| brand | item     | email                     | password  | firstquantity | secondquantity |
-	| CKUS  | 36096241 | myaccountckus45@gmail.com | Passw0rd  | 2             | 3              |
+	| CKUS  | 36207211-871 | myaccountckus45@gmail.com | Passw0rd  | 2             | 3              |
 #	| CKCA  | 45003293 | myaccountckca45@gmail.com | Passw0rd  | 2             | 3              |
 	
 #@id=22 @positive @parallel @cart_module @cart 
@@ -403,7 +403,7 @@ Scenario Outline: Add the same item to a cart twice and check cart for quantity
 	
 	Examples:
 	| brand | item       | quantity | 
-#	| CKUS  | 36096241   | 2        |  
+#	| CKUS  | 36207211-871   | 2        |  
 #	| CKCA  | 45003293   | 2        | 
 	
 @id=28 @negative @parallel @cart_module @cart @brand=CK @desktop
@@ -424,7 +424,7 @@ Scenario Outline: Verify adding an item to cart as signed in user and apply inva
 	
 	Examples:
 	| brand | email                     | password | item     | code   | text                      |
-	| CKUS  | myaccountckus45@gmail.com | Passw0rd | 36096241 | TTTEEE | TTTEEE is an invalid code |
+	| CKUS  | myaccountckus45@gmail.com | Passw0rd | 36207211-871 | TTTEEE | TTTEEE is an invalid code |
 	
 @id=30 @positive @parallel @cart_module @cart @brand=CK @desktop
 Scenario Outline: Verify adding a item to wishlist that is already present in cart
@@ -445,7 +445,7 @@ Scenario Outline: Verify adding a item to wishlist that is already present in ca
 	
 	Examples:
 	| brand	| email                     | password | item     |
-	| CKUS  | myaccountckus45@gmail.com | Passw0rd | 36096241 |
+	| CKUS  | myaccountckus45@gmail.com | Passw0rd | 36207211-871 |
 #	| CKCA  | myaccountckca45@gmail.com | Passw0rd | 45003293 |	
 	
 @id=31 @positive @parallel @cart_module @cart @brand=CK @desktop
@@ -459,5 +459,5 @@ Scenario Outline: Verify clicking edit button from mini cart navigates user to c
 	
 	Examples:
 	| brand	| product  |
-	| CKUS  | 36096241 |
+	| CKUS  | 36207211-871 |
 #	| CKCA  | 45003293 |
