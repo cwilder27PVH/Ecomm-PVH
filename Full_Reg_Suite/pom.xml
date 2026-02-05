@@ -19,7 +19,7 @@
 		<maven.surefire.version>3.0.0-M3</maven.surefire.version>
 		<maven.failsafe.version>3.0.0-M3</maven.failsafe.version>
 		<cucumber.parallel.version>5.0.0</cucumber.parallel.version>
-		<assertj.core.version>3.11.1</assertj.core.version>
+		<assertj.core.version>3.27.7</assertj.core.version>
 		<aeonbits.owner.version>1.0.9</aeonbits.owner.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<mojo.maven.buildhelper.version>3.0.0</mojo.maven.buildhelper.version>
